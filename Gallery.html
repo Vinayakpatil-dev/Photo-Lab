@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Travel Diaries</title>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Fjalla+One&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <style>
+
+body{
+    background-image: url(bg.jpg);
+    background-position:1500px 2000px;
+    margin:0;
+    padding: 0;
+}
+h3{
+
+    font-family: 'Fjalla One', sans-serif;
+    letter-spacing:3px;
+    color: rgb(251, 255, 0);
+    position:absolute;
+    top:50px;
+    left:430px;
+    font-size:40px;
+    letter-spacing:5px;
+    text-shadow:0px 0px 5px  black;
+}
+ .fa-plane{
+   color:rgb(0, 0, 0);
+   font-size:50px;
+   transform: rotateZ(-60deg);
+}
+       /*start-img1*/
+.one{
+    width:400px;
+    height:300px;
+    position:relative;
+    top:250px;
+    left:200px;
+    border:3px solid white;
+    border-radius:5px;
+    margin:25px;
+    z-index:0;
+}
+.out1{
+    background-color: rgba(0, 0, 0, 0.5);
+            position:fixed;
+            top:-100%;
+            left:100%;
+            width:100%;
+            height:100%;
+            opacity:0;
+            transition:opacity .5 ease-in-out;
+            z-index:1;
+}
+.out1:target{
+            opacity:1;
+            top:0;
+            left:0;
+}
+.out1 img{
+            position: absolute;
+            top:60px;
+            left:300px;
+            width:800px;
+            height:500px;
+            border-radius:20px;
+}
+           /*end-img1*/
+
+            /*start-img5*/
+.two{
+    width:400px;
+    height:300px;
+    position:absolute;
+    top:1000px;
+    left:450px;
+    border:3px solid white;
+    border-radius:5px; 
+    z-index:0;
+}
+           /*end-img5*/
+
+.close{
+    background-color:white;
+    width:30px;
+    height:30px;
+    position:absolute;
+    top:-80px;
+    right:0;
+    transition:0.5s linear;
+}
+.close:before{
+    content:'';
+    width:1px;
+    height:30px;
+    background-color:black;
+    display: block;
+    transform: rotateZ(45deg);
+    position:relative;
+    left:15px;
+}
+.close:after{
+    content:'';
+    width:1px;
+    height:30px;
+    background-color:black;
+    display: block;
+    transform: rotateZ(-45deg);
+    position:absolute;
+    top:0;
+    left:15px;
+}
+.out1:target .close{
+     top:0;
+}
+    </style>
+</head>
+
+<body>
+  <h3>MY TRAVEL DIARIES  <i class="fas fa-plane"></i></h3>
+  <!--1st image-->
+  <a href="#tower" class="eiffel"><img src="tower.jpg" alt="Eiffel Tower" class="one"></a>
+  <div id="tower" class="out1">
+      <img src="tower.jpg" alt="Eiffel Tower">
+      <a href="#" class="close"></a>
+  </div>
+  <!--end of 1st-->
+
+  <!--2st image-->
+  <a href="#water"><img src="water.jpg" alt="Waterfall" class="one"></a>
+  <div id="water" class="out1">
+      <img src="water.jpg" alt="Waterfall">
+      <a href="#" class="close"></a>
+  </div>
+  <!--end of 2st-->
+
+   <!--3st image-->
+   <a href="#pisa"><img src="pisa.jpg" alt="Leaning Tower Of Pisa" class="one"></a>
+   <div id="pisa" class="out1">
+       <img src="pisa.jpg" alt="Leaning Tower Of Pisa">
+       <a href="#" class="close"></a>
+   </div>
+   <!--end of 3st-->
+
+    <!--4st image-->
+    <a href="#scene"><img src="scenery.jpg" alt="scenery" class="one"></a>
+    <div id="scene" class="out1">
+        <img src="scenery.jpg" alt="scenery">
+        <a href="#" class="close"></a>
+    </div>
+    <!--end of 4st-->
+
+    <!--5st image-->
+    <a href="#disney"><img src="Disney.jpg" alt="Disneyland" class="two"></a>
+    <div id="disney" class="out1">
+        <img src="Disney.jpg" alt="Disneyland">
+        <a href="#" class="close"></a>
+    </div>
+    <!--end of 5st-->
+</body>
+</html>
